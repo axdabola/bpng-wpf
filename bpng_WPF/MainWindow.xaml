@@ -1,0 +1,265 @@
+﻿<Window x:Class="bpng_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:bpng_WPF"
+        mc:Ignorable="d"
+        Title="BPNG" 
+        Height="500" 
+        Width="750"        
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        FontFamily="Monospace">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Border
+                    Grid.Column="0"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    BorderThickness="1.5"
+                    Background="WhiteSmoke"
+                    BorderBrush="LightGray" 
+                    Margin="10, 10, 5, 10">
+                <Border.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Border.Resources>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="8*"/>
+                        <RowDefinition Height="1.35*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0"
+                        Text="Image 1"
+                        FontSize="15"
+                        FontWeight="DemiBold"
+                        FontFamily="Arial"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"/>
+                    <Border
+                        Grid.Row="1"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        BorderThickness="1.5"
+                        Background="White"
+                        BorderBrush="WhiteSmoke" 
+                        Margin="10, 10, 5, 10">
+                        <Border.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Border.Resources>
+                        <Image
+                            x:Name="image1Preview"
+                            Margin="2"
+                            Stretch="Fill"/>
+                    </Border>
+                    <Button Grid.Row="2"
+                            x:Name="importImage1Button"
+                            Margin="5"
+                            Background="AliceBlue"
+                            BorderBrush="LightGray" 
+                            Click="importImage1Button_Click">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                        <Button.Content>
+                            <TextBlock
+                                Text="Import"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"/>
+                        </Button.Content>
+                    </Button>
+                </Grid>
+            </Border>
+            <Border
+                    Grid.Column="1"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    BorderThickness="1.5"
+                    Background="WhiteSmoke"
+                    BorderBrush="LightGray" 
+                    Margin="5, 10, 5, 10">
+                <Border.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Border.Resources>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="8*"/>
+                        <RowDefinition Height="1.35*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0"
+                        Text="Image 2"
+                        FontSize="15"
+                        FontWeight="DemiBold"
+                        FontFamily="Arial"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"/>
+                    <Border
+                        Grid.Row="1"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        BorderThickness="1.5"
+                        Background="White"
+                        BorderBrush="WhiteSmoke" 
+                        Margin="10, 10, 5, 10">
+                        <Border.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Border.Resources>
+                        <Image
+                            x:Name="image2Preview"
+                            Margin="2"
+                            Stretch="Fill"/>
+                    </Border>
+                    <Button Grid.Row="2"
+                            x:Name="importImage2Button"
+                            Margin="5"
+                            Background="AliceBlue"
+                            BorderBrush="LightGray" 
+                            Click="importImage2Button_Click">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                        <Button.Content>
+                            <TextBlock
+                                Text="Import"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"/>
+                        </Button.Content>
+                    </Button>
+                </Grid>
+            </Border>
+            <Border
+                    Grid.Column="2"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    BorderThickness="1.5"
+                    Background="WhiteSmoke"
+                    BorderBrush="LightGray" 
+                    Margin="5, 10, 5, 10">
+                <Border.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Border.Resources>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="8*"/>
+                        <RowDefinition Height="1.35*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0"
+                        Text="Result"
+                        FontSize="15"
+                        FontWeight="DemiBold"
+                        FontFamily="Arial"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"/>
+                    <Border
+                        Grid.Row="1"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        BorderThickness="1.5"
+                        Background="White"
+                        BorderBrush="WhiteSmoke" 
+                        Margin="10, 10, 5, 10">
+                        <Border.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Border.Resources>
+                        <Image
+                            x:Name="resultPreview"
+                            Margin="2"
+                            Stretch="Fill"/>
+                    </Border>
+                    <Button Grid.Row="2"
+                            x:Name="saveButton"
+                            Margin="5"
+                            Background="AliceBlue"
+                            BorderBrush="LightGray"
+                            Click="saveButton_Click">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                        <Button.Content>
+                            <TextBlock
+                                Text="Save"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"/>
+                        </Button.Content>
+                    </Button>
+                </Grid>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0"
+                        VerticalAlignment="Center">
+                <TextBlock 
+                    Text="Cutoff Levels" 
+                    HorizontalAlignment="Center"
+                    FontWeight="Bold"/>
+                <TextBox
+                    x:Name="numCutoff1"
+                    Text="240"
+                    TextAlignment="Center"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Stretch" 
+                    Width="150"
+                    Margin="5"
+                    Background="WhiteSmoke"
+                    PreviewTextInput="numCutoff1_PreviewTextInput"
+                    TextChanged="Update"
+                    />
+                <TextBox
+                    x:Name="numCutoff2"
+                    Text="245"
+                    TextAlignment="Center"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Stretch" 
+                    Width="150"
+                    Margin="5"
+                    Background="WhiteSmoke"
+                    PreviewTextInput="numCutoff2_PreviewTextInput"
+                    TextChanged="Update"
+                    />
+            </StackPanel>
+            <CheckBox 
+                Grid.Column="1"
+                x:Name="chkSize"
+                IsChecked="True"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center">
+                <TextBlock
+                    Text="Size is equal to Image 2"/>
+            </CheckBox>
+        </Grid>
+    </Grid>
+</Window>
